@@ -11,7 +11,8 @@ import SwiftUI
 struct CatPicApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
+	

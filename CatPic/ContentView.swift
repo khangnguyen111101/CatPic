@@ -4,7 +4,7 @@
 //
 //  Created by Khang Nguyen Bao on 22/07/2022.
 //
-
+import Lottie
 import SwiftUI
 
 struct ContentView: View {
