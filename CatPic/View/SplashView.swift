@@ -9,7 +9,6 @@ import Lottie
 
 
 struct SplashView: View {
-    
     // 1.
     @State var isActive:Bool = false
     

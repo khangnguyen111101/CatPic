@@ -8,6 +8,7 @@ import Lottie
 import SwiftUI
 
 struct ContentView: View {
+    @State var isWelcomeActive: Bool = true
     var body: some View {
         Text("Hello, world!")
             .padding()
