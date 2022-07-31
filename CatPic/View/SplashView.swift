@@ -17,7 +17,7 @@ struct SplashView: View {
             // 2.
             if self.isActive {
                 // 3.
-                HomeView()
+                CatList()
             } else {
                 // 4.
                 VStack {

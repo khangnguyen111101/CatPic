@@ -8,15 +8,13 @@ import Lottie
 import SwiftUI
 
 struct ContentView: View {
-    @State var isWelcomeActive: Bool = true
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        SplashView()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CatList()
     }
 }

@@ -9,11 +9,7 @@ import SwiftUI
 struct HomeView: View {
 
     var body: some View {
-        VStack {
-            List(0..<5) { i in
-                Text("Item - \(i)")
-            }
-        }
+        SplashView()
     }
 
 }

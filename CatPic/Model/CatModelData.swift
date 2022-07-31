@@ -1,6 +1,6 @@
 import Foundation
 
-var cats = decodeJsonFromUrl()
+var cats = decodeJsonFromUrl(Constants.allBreedUrl)
 
 func decodeJsonFromUrl(jsonUrl: String) -> [Cat] {
     guard let url = URL(string: jsonUrl) else {fatalError("Missing URL")}
