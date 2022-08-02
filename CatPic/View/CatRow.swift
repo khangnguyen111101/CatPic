@@ -5,6 +5,7 @@ struct CatRow: View{
 
     var body: some View {
         HStack {
+            AsyncImage(url: URL(cat.image.url)).frame(width: 50, height: 50).resizable()
             Text(Cat.name)
         }
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Cat: Codable {
+struct Cat: Identifiable, Codable {
     var id: String
     var name: String
     var cfa_url: String
@@ -36,9 +36,6 @@ struct Cat: Codable {
     var short_legs: Int
     var wikipedia_url: String
     var hypoallergenic: Int
-}
-
-struct Weight: Codable {
-    var imperial: String
-    var metric: String
+    var weight: Weight
+    var image: Image
 }
