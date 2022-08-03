@@ -1,20 +1,23 @@
+//
+//  Cat.swift
+//  CatPic
+//
+//  Created by Khang Nguyen Bao on 03/08/2022.
+//
+
 import Foundation
 
 struct Cat: Identifiable, Codable {
+    var weight: Weight
     var id: String
     var name: String
-    var cfa_url: String
-    var vetstreet_url: String
-    var vcahospitals_url: String
     var temperament: String
     var origin: String
     var country_codes: String
     var country_code: String
     var description: String
     var life_span: String
-    var indor: Int
-    var lap: Int
-    var alt_names: String
+    var indoor: Int
     var adaptability: Int
     var affection_level: Int
     var child_friendly: Int
@@ -34,12 +37,5 @@ struct Cat: Identifiable, Codable {
     var rex: Int
     var suppressed_tail: Int
     var short_legs: Int
-    var wikipedia_url: String
     var hypoallergenic: Int
-    var weight: Weight
-    var image: Image
-
-    function getImage() -> Image {
-        
-    }
 }

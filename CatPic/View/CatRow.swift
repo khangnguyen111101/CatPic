@@ -1,3 +1,11 @@
+//
+//  CatRow.swift
+//  CatPic
+//
+//  Created by Khang Nguyen Bao on 03/08/2022.
+//
+
+import Foundation
 import SwiftUI
 
 struct CatRow: View{
@@ -5,8 +13,8 @@ struct CatRow: View{
 
     var body: some View {
         HStack {
-            AsyncImage(url: URL(cat.image.url)).frame(width: 50, height: 50).resizable()
-            Text(Cat.name)
+            
+            Text(cat.name)
         }
     }
 }
