@@ -1,9 +1,9 @@
 import Foundation
 
-var cats = decodeJsonFromUrl(Constants.allBreedUrl)
+var cats = getAllCatsFromApi(Constants.allBreedUrl)
 
-func decodeJsonFromUrl(jsonUrl: String) -> [Cat] {
-    guard let url = URL(string: jsonUrl) else {fatalError("Missing URL")}
+func getAllCatsFromApi(apiUrl: String) -> [Cat] {
+    guard let url = URL(string: apiUrl) else {fatalError("Missing URL")}
 
     let request = URLRequest (url: url)
     request.httpMethod = "GET"
@@ -25,4 +25,8 @@ func decodeJsonFromUrl(jsonUrl: String) -> [Cat] {
             }
         }
     }.resume()
+}
+
+function getCatPicFromApi(id: String) -> Image {
+    guard let url = URL(string: Constants.)
 }

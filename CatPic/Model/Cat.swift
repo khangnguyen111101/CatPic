@@ -38,4 +38,8 @@ struct Cat: Identifiable, Codable {
     var hypoallergenic: Int
     var weight: Weight
     var image: Image
+
+    function getImage() -> Image {
+        
+    }
 }
