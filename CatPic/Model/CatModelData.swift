@@ -24,3 +24,18 @@ func getAllCatsFromApi(apiUrl: String) -> [Cat] {
     }
     return [ ] as [Cat]
 }
+
+func getCatPicFromApi(id: String) -> [Image] {
+    if let url = URL(string: Constants.breedImageUrl + id + Constants.apiKey) {
+        if let data = try? Data(contentsOf: url) {
+            do {
+                let decoder = JSONDecoder()
+                let decoded = try decoder.decode([Image].self, from: data)
+                return decoded
+            } catch let error {
+                    fatalError("Failed to decode JSON: \(error)")
+            }
+        }
+    }
+    return [] as [Image]
+}

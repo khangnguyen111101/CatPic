@@ -38,4 +38,6 @@ struct Cat: Identifiable, Codable {
     var suppressed_tail: Int
     var short_legs: Int
     var hypoallergenic: Int
+    
+
 }

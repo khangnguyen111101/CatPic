@@ -9,13 +9,19 @@ import Foundation
 import SwiftUI
 
 struct CatProfile: View {
-    var cat: Cat
-
+    let cat: Cat
+    
     var body: some View {
         ScrollView {
             VStack {
-//                AsyncImage(url: URL())
+                Text(cat.name)
             }
-        }
+        }.navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct CatProfile_Previews: PreviewProvider {
+    static var previews: some View {
+        CatProfile(cat: cats[0])
     }
 }
