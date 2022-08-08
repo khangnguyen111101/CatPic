@@ -1,15 +1,20 @@
-//
-//  CatModelData.swift
-//  CatPic
-//
-//  Created by Khang Nguyen Bao on 03/08/2022.
-//
+/*
+    RMIT University Vietnam
+    Course: COSC2659 iOS Development
+    Semester: 2022B
+    Assessment: Assignment 1
+    Author: Nguyen Bao Khang
+    ID: s3817970
+    Created  date: 03/08/2022
+    Last modified: 07/08/2022
+    Acknowledgement: TheCatAPI (https://developers.thecatapi.com)
+*/
 
 import Foundation
-
+// get initial cat breeds list
 var cats = getAllCatsFromApi(apiUrl: Constants.allBreedUrl)
 
-
+// fetch API to get all cat breeds
 func getAllCatsFromApi(apiUrl: String) -> [Cat] {
     if let url = URL(string: apiUrl + Constants.apiKey) {
         if let data = try? Data(contentsOf: url) {
@@ -22,20 +27,22 @@ func getAllCatsFromApi(apiUrl: String) -> [Cat] {
             }
         }
     }
+    
     return [ ] as [Cat]
 }
 
-func getCatPicFromApi(id: String) -> [Image] {
-    if let url = URL(string: Constants.breedImageUrl + id + Constants.apiKey) {
+// fetch API to get a random cat image, regarding the cat breed
+func getCatPicFromApi(id: String) -> CatImage? {
+    if let url = URL(string: Constants.breedImageUrl + id + "&" + Constants.apiKey) {
         if let data = try? Data(contentsOf: url) {
             do {
                 let decoder = JSONDecoder()
-                let decoded = try decoder.decode([Image].self, from: data)
-                return decoded
+                let decoded = try decoder.decode([CatImage].self, from: data)
+                return decoded[0]
             } catch let error {
                     fatalError("Failed to decode JSON: \(error)")
             }
         }
     }
-    return [] as [Image]
+    return nil
 }
